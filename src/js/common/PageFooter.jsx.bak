@@ -1,0 +1,68 @@
+import JSONUtil from "../util/JSONUtil";
+
+//-----------------------------------------------------------------------------------------------
+//	date: 2015/10/11
+//
+//	author: yonglu.xie
+//
+//	description: PageFooter Component Class
+//-----------------------------------------------------------------------------------------------
+export default class PageFooter extends React.Component {
+
+	render() {
+
+		const myDate = new Date();
+
+		//let _config = JSONUtil.getJSON("project_config.json");
+		//if (_config == null) {
+		//	_config = {};
+		//}
+
+		let _config = sessionStorage.getItem("packageJson");
+		if(!_config){
+				_config = JSONUtil.getJSON("package.json");
+		} 
+		const tip = [];
+		if(_config!=null){
+			tip.push("<table>");		
+			if(_config["serviceDependencies"]){
+				for(let key in _config.serviceDependencies){
+				  const dependenciesVersion = _config.dependencies[key];
+				  const serviceDependenciesVersion = _config.serviceDependencies[key];
+				  const _version = dependenciesVersion==null?serviceDependenciesVersion:dependenciesVersion;
+					tip.push("<tr>");
+					tip.push("<td>"+key+"</td>");
+					tip.push("<td style='padding-left:15px'>"+_version+"</td>");
+					tip.push("</tr>");
+				}
+			}
+			tip.push("</table>");
+		}else{
+			_config={"version":"0.0.0"}
+		}
+		
+
+		return (
+			<div className="pagefooter">
+				<a href="javascript:void(0)" class="tooltip-footer" style={{color:"gray", cursor: "pointer"}} data-placement="top" data-toggle="tooltip" data-html="true"  data-original-title={tip.join("")}>
+   					Version:{_config.versionDescription==undefined ? _config.version : _config.versionDescription}
+              	</a>
+				<span>  Copyright © {myDate.getFullYear()} eBaoTech Corporation. All rights reserved.</span>
+			</div>
+		);
+	}
+}
+
+/**
+ * PageFooter component prop types
+ */
+PageFooter.propTypes = {
+
+};
+
+/**
+ * Get PageFooter component default props
+ */
+PageFooter.defaultProps = {
+
+};

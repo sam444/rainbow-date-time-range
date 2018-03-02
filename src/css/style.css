@@ -1,0 +1,47 @@
+.dateRangeTime .jedate .pickerposition{
+    display: none;
+}
+.dateRangeTime  .jeinpbox{
+    width: 100%;
+}
+.dateRangeTime label:first-child{
+    display: none;
+}
+.dateRangeTime .form-group{
+    margin-bottom: 0em;
+}
+
+.dateRangeTime .dateRangeTimeGroup{
+    display: flex;
+}
+
+.dateRangeTime .input-group{
+    border: none;
+    padding-left: 10%;
+}
+.dateRangeTime .input-group-addon{
+    padding-left: 0em;
+}
+.dateRangeTime .option{
+    position: absolute;
+}
+.dateRangeTime .option-table{
+    margin-left: -10px;
+}
+.dateRangeTime .option-table .dropdown-item{
+    margin-left: -15px;
+}
+
+.dateRangeTime .option-table .row{
+    width:90%;
+}
+
+.dateRangeTime .option-table a:link, a:visited, a:hover, a:active {
+    color: #000000;
+    text-decoration: none;
+}
+
+.dateRangeTime .option-table a:hover {
+    color: #3692D9;
+    background-color: transparent;
+}

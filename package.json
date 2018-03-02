@@ -1,0 +1,28 @@
+{
+  "author": {
+    "name": "RainbowUI Team"
+  },
+  "dependencies": {
+    "rainbow-foundation-tools": "^2.0.0",
+    "rainbowui-core": "^2.0.0"
+  },
+  "description": "RainbowUI DateRangePicker",
+  "devDependencies": {},
+  "dist": {
+    "tarball": "http://repo.ebaotech.com:80/artifactory/api/npm/npm-all/rainbowui-date-range-picker/-/rainbowui-date-range-picker-2.0.9.tgz",
+    "shasum": "4bc2681d4d3ac7bd30f0443ff354289737d92a91"
+  },
+  "keywords": [],
+  "main": "./src/index.js",
+  "name": "rainbowui-date-time-range-picker",
+  "optionalDependencies": {},
+  "publishConfig": {
+    "registry": "http://repo.ebaotech.com/artifactory/api/npm/npm-all"
+  },
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "https://oss.ebaotech.com/rainbow-ui/date-range-picker.git"
+  },
+  "version": "2.0.0"
+}
